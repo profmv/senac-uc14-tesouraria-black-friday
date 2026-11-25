@@ -1,0 +1,5 @@
+artifacts/*.png
+artifacts/*.pdf
+artifacts/*.log
+artifacts/__pycache__/
+docs/prompt/

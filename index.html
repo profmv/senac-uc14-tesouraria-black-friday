@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aula interativa de tesouraria para o Técnico em Administração do Senac Paraná. Pratique porcentagem e juros em quatro decisões de Black Friday.">
+  <title>Operação Tesouraria na Black Friday | Central da aula</title>
+  <link rel="stylesheet" href="assets/simulator.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+  <script defer src="assets/vendor/chart.umd.min.js"></script>
+  <script defer src="assets/simulator.js"></script>
+</head>
+<body class="hub">
+  <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="i-brand" viewBox="0 0 24 24"><path d="M3 20V5m0 15h18M7 16v-3m5 3V9m5 7v-5M6 9l5-5 4 2 5-4"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M8 4.5 20 12 8 19.5z"/></symbol><symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M9 21l3-4 3 4m-3-4v-4"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6C8 3 4 4 2 5v14c3-2 7-1 10 1 3-2 7-3 10-1V5c-3-1-7-2-10 1v14"/></symbol><symbol id="i-file" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M13 2v7h7M8 13h8m-8 4h6"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol><symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2m1-15a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.8 13A8.8 8.8 0 0 1 11 3.3 9 9 0 1 0 20.8 13z"/></symbol><symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol></defs></svg>
+  <header class="hub-header" id="inicio"><div class="wrap hub-header-inner">
+    <a class="hub-brand" href="index.html"><span class="brand-icon"><svg class="icon" aria-hidden="true"><use href="#i-brand"></use></svg></span><span>Tesouraria Lab<small>Senac Paraná</small></span></a>
+    <nav class="hub-nav" aria-label="Navegação na central"><a href="#inicio" aria-current="location">Visão geral</a><a href="#materiais">Materiais</a><a href="#simulador">Simulador</a></nav>
+    <button class="mode-switch" type="button" data-theme-toggle><svg class="icon" aria-hidden="true"><use href="#i-moon"></use></svg><span data-theme-label>Modo escuro</span></button>
+  </div></header>
+  <main class="wrap">
+    <section class="hub-hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="hero-kicker">UC 14 / Técnico em Administração</p>
+        <h1 id="hero-title">Operação Tesouraria<span>na Black Friday</span></h1>
+        <p class="hero-desc">Assuma o caixa de uma empresa e use porcentagem, juros simples e compostos para decidir como pagar, receber e investir.</p>
+        <div class="hero-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>19h às 22h</span><span><svg class="icon" aria-hidden="true"><use href="#i-people"></use></svg>4 rodadas em equipe</span></div>
+        <a class="hero-action" href="slides.html"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg>Iniciar apresentação</a>
+      </div>
+      <div class="hero-art"><img src="assets/media/terminal.webp" width="900" height="772" alt="" fetchpriority="high"></div>
+    </section>
+    <section id="materiais" class="materials" aria-labelledby="materials-title"><div class="section-title"><h2 id="materials-title">Materiais da aula</h2></div>
+      <div class="resource-grid">
+        <a class="resource resource-slides" href="slides.html"><span class="resource-icon"><svg class="icon" aria-hidden="true"><use href="#i-screen"></use></svg></span><h3>Apresentação interativa</h3><p>Projete os desafios, controle o tempo e acompanhe o placar das equipes.</p><span class="resource-action">Abrir slides<svg class="icon" aria-hidden="true"><use href="#i-chev"></use></svg></span></a>
+        <a class="resource resource-guide" href="guia-professor.html"><span class="resource-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span><h3>Guia do professor</h3><p>Conduza cada bloco da aula com perguntas, orientações e gabaritos.</p><span class="resource-action">Consultar guia<svg class="icon" aria-hidden="true"><use href="#i-chev"></use></svg></span></a>
+        <a class="resource resource-plan" href="plano-de-aula.html"><span class="resource-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span><h3>Plano de aula</h3><p>Consulte as competências, a metodologia e os critérios de avaliação.</p><span class="resource-action">Ver plano<svg class="icon" aria-hidden="true"><use href="#i-chev"></use></svg></span></a>
+      </div>
+    </section>
+    <section id="simulador" class="simulator" aria-labelledby="sim-title">
+  <div class="sim-heading"><div><h2 id="sim-title">Simulador de tesouraria</h2><p>Experimente os números e veja como cada escolha altera o caixa.</p></div></div>
+  <div class="sim-grid">
+    <article class="sim-card sim-factor"><div class="sim-card-head"><div><h3>Fator multiplicador</h3><p>Compare o mesmo percentual em duas operações.</p></div></div>
+      <div class="sim-fields"><label>Valor inicial <span>R$</span><input id="sim-factor-value" type="text" inputmode="decimal" value="100,00" autocomplete="off"></label><label>Percentual <span>%</span><input id="sim-factor-rate" type="text" inputmode="decimal" value="20" autocomplete="off"></label></div>
+      <p id="sim-factor-feedback" class="sim-feedback" role="status" aria-live="polite"></p><div id="sim-factor-results" class="sim-factor-results"><div><span>COM ACRÉSCIMO</span><strong id="sim-increase">R$ 120,00</strong><small id="sim-increase-formula">100,00 x 1,20</small></div><div><span>COM DESCONTO</span><strong id="sim-discount">R$ 80,00</strong><small id="sim-discount-formula">100,00 x 0,80</small></div></div><p class="sim-note">O desconto é calculado sobre o valor inicial. Alterar a base muda o resultado.</p>
+    </article>
+    <article class="sim-card sim-interest"><div class="sim-card-head"><div><h3>Simples ou compostos?</h3><p>Compare a evolução de uma mesma dívida.</p></div></div>
+      <div class="sim-fields sim-fields-three"><label>Capital inicial <span>R$</span><input id="sim-capital" type="text" inputmode="decimal" value="10.000,00" autocomplete="off"></label><label>Taxa mensal <span>% a.m.</span><input id="sim-rate" type="text" inputmode="decimal" value="5" autocomplete="off"></label><label>Prazo <span>meses</span><input id="sim-months" type="number" min="1" max="120" step="1" value="4"></label></div>
+      <p id="sim-interest-feedback" class="sim-feedback" role="status" aria-live="polite"></p><div id="sim-interest-results"><div class="sim-totals"><div><span>JUROS SIMPLES</span><strong id="sim-simple">R$ 12.000,00</strong><small id="sim-simple-interest">Juros: R$ 2.000,00</small></div><div><span>JUROS COMPOSTOS</span><strong id="sim-compound">R$ 12.155,06</strong><small id="sim-compound-interest">Juros: R$ 2.155,06</small></div><div><span>DIFERENÇA</span><strong id="sim-difference">R$ 155,06</strong><small>entre os montantes</small></div></div>
+      <div class="sim-chart-wrap"><canvas id="sim-chart" role="img" aria-label="Gráfico comparativo da evolução dos juros simples e compostos"></canvas></div><p class="sim-chart-caption">Evolução do montante ao longo do tempo. Passe o cursor sobre o gráfico para consultar os valores.</p></div>
+    </article>
+  </div><p class="sim-limit">Valores limitados a R$ 1.000.000.000, taxas de 0 a 100% e prazo de 1 a 120 meses.</p>
+</section>
+  </main>
+  <footer class="hub-footer"><div class="wrap foot-inner"><span>Senac Paraná / Técnico em Administração / UC 14</span><a href="#inicio">Voltar ao início</a></div></footer>
+</body>
+</html>
