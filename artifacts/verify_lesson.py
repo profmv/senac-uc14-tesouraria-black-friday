@@ -84,6 +84,22 @@ def verify():
             pattern = re.escape(formatted).replace(",00", "(?:,00)?") if formatted.endswith(",00") else re.escape(formatted)
             assert re.search(r"(?<![\d.,])" + pattern + r"(?![\d,])", text), formatted
         assert "23,5%" in text and "02/12" in text
+    # Variable balloons: every data-var used must exist in the data file; both pages load CSS and scripts.
+    data_path = ROOT / "assets" / "variaveis-dados.js"
+    assert data_path.is_file(), "assets/variaveis-dados.js ausente"
+    keys = set(re.findall(r"^\s{2}(\w+):\s*\{", data_path.read_text(encoding="utf-8"), re.M))
+    assert {"C", "i", "t", "J", "M", "valor", "fator", "potencia"} <= keys, keys
+    used_total = 0
+    for name in ("slides.html", "guia-professor.html"):
+        doc = parsed[name]
+        used = {tag["data-var"] for tag in doc.select("[data-var]")}
+        assert used and used <= keys, (name, used - keys)
+        used_total += len(doc.select("button.var[data-var]"))
+        assert doc.select_one('link[rel=stylesheet][href="assets/variaveis.css"]'), name
+        sources = [tag["src"] for tag in doc.select("script[src]")]
+        assert "assets/variaveis-dados.js" in sources and "assets/variaveis.js" in sources, name
+        assert sources.index("assets/variaveis-dados.js") < sources.index("assets/variaveis.js"), name
+    print(f"[OK] {used_total} variable balloons use keys present in variaveis-dados.js.")
     print(f"[OK] {len(PAGES)} HTML pages, all application scripts and local references, UTF-8, seven blocks / 180 minutes, four rounds and {len(values)} financial amounts.")
 
 

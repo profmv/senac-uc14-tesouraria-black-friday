@@ -11,3 +11,16 @@ The integrated site passed the calculation and browser checks before the initial
 | Simulator | Exercised comma decimals, independent invalid input handling, restoration of results, and live recalculation. |
 
 The integration review corrected the percentage-to-decimal notation in the teacher guide and a lesson-plan table that widened the mobile page. Chart text and line colors respond to theme changes. Printing and audience visibility on a specific physical projector depend on the classroom equipment.
+
+## Balões das variáveis (2026-11-25)
+
+As variáveis das fórmulas em slides.html e guia-professor.html (C, i, t, J, M, valor, fator, xʸ) são botões `button.var[data-var]` que abrem um balão único (`#var-pop`, role tooltip) com nome, ideia, detalhe, exemplo da aula e, quando existe, um aviso de cuidado. O conteúdo vem de assets/variaveis-dados.js (`window.VARIAVEIS`); o comportamento está em assets/variaveis.js e o visual em assets/variaveis.css. O texto é inserido com textContent, sem HTML.
+
+| Verificação | Como |
+| --- | --- |
+| Automática | `python artifacts/verify_lesson.py` confere que todo `data-var` existe em variaveis-dados.js e que as duas páginas carregam o CSS, os dados e o script (dados antes do script). |
+| Mouse e foco | Passar o mouse ou focar com Tab em uma variável abre o balão; sair fecha após cerca de 160 ms; o balão fica aberto enquanto o foco está no botão. |
+| Toque | Um toque abre; novo toque na mesma variável fecha; toque fora fecha. |
+| Esc | Com o balão aberto, Esc fecha só o balão e o foco permanece na variável. Setas e Espaço continuam navegando os slides; trocar de slide fecha o balão. |
+| Tela cheia | Em slides.html, tecla F e abrir uma variável: o balão aparece. O script move o balão para `document.fullscreenElement` quando ele não é o elemento raiz. Nota: o Esc do navegador sai da tela cheia por conta própria. |
+| 390 px e temas | Sem rolagem horizontal; largura máxima do balão min(20rem, 100vw − 1.5rem); conferir nos temas claro e escuro. |
