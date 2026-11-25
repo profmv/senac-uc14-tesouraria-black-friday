@@ -24,3 +24,9 @@ As variáveis das fórmulas em slides.html e guia-professor.html (C, i, t, J, M,
 | Esc | Com o balão aberto, Esc fecha só o balão e o foco permanece na variável. Setas e Espaço continuam navegando os slides; trocar de slide fecha o balão. |
 | Tela cheia | Em slides.html, tecla F e abrir uma variável: o balão aparece. O script move o balão para `document.fullscreenElement` quando ele não é o elemento raiz. Nota: o Esc do navegador sai da tela cheia por conta própria. |
 | 390 px e temas | Sem rolagem horizontal; largura máxima do balão min(20rem, 100vw − 1.5rem); conferir nos temas claro e escuro. |
+
+## Revisão para substituto e redesenho visual (2026-11-25 18:32)
+
+- Guia: caixa "Antes de entrar na sala", slide e teclas por bloco, exercícios do nivelamento, plano de corte, tarefa extra, saída individual fixa (R$ 5.300,00 × R$ 5.304,50) com recolha e foto do placar. R2 passa a dizer "sobre o total".
+- Visual "vitrine de Black Friday" (Anton local em assets/fonts, OFL), animações de entrada, carimbo ao revelar gabarito, animação do placar, `prefers-reduced-motion`.
+- `python artifacts/verify_lesson.py` e `python artifacts/check_browser.py http://127.0.0.1:8765/` passaram na árvore final.

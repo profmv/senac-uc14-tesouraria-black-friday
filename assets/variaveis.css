@@ -29,7 +29,7 @@
 
 .var:hover,
 .var[aria-expanded='true'] {
-  background: rgba(247, 148, 29, 0.22);
+  background: var(--hl, rgba(247, 148, 29, 0.22));
 }
 
 .var:focus-visible,
@@ -165,3 +165,14 @@ html[data-theme='dark'] .var-pop {
     text-decoration: none;
   }
 }
+
+/* Redesenho: balão como etiqueta de preço com sombra sólida. */
+.var-pop {
+  border: 2px solid var(--ink, #151515);
+  border-top: 6px solid var(--tag, #ffd60a);
+  border-radius: 0;
+  box-shadow: 5px 5px 0 var(--card-shadow, #151515);
+  font-family: var(--font-body, Inter, system-ui, Arial, sans-serif);
+}
+.var-pop-title { font-family: var(--font-display, Impact, sans-serif); font-weight: 400; text-transform: uppercase; letter-spacing: 0.02em; font-size: 1.35rem; }
+.var-pop-example { border-left-color: var(--sale, #d7102f); }
